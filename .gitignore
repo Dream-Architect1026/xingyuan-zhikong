@@ -1,0 +1,83 @@
+# ---- 构建与打包产物 ----
+build/
+build_stage/
+build_stage3/
+build_staging/
+dist/
+release/
+*.spec.bak
+
+# ---- 安装包 / 可执行产物（不入库，随 Release 分发）----
+*.exe
+*.msi
+*.zip
+*.7z
+
+# ---- 本地运行数据 ----
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+backend/.db_migrated
+backend/automation.json
+backend/shape_cache.json
+*.jsonl
+
+# ---- 含蓝牙地址 / Token / 密钥的本机配置 ----
+backend/config.yaml
+runtime.json
+secrets*
+*.pem
+*.pfx
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# ---- 日志 ----
+*.log
+*.log.err
+build_*.log
+_setup_*.log
+_portable_*.log
+_prebuild_*.log
+
+# ---- 构建/取证临时目录 ----
+_verify/
+evidence/
+shots/
+iterations/
+aihead_selftest/
+mock/results/
+
+# ---- 根目录临时截图与草稿 ----
+/*.png
+/*.jpg
+/*.jpeg
+_msg_resume_*.txt
+_version_probe.txt
+ck_trace.jsonl
+scroll_selftest.json
+AI配置保存说明.txt
+部署与运维说明.md
+
+# ---- 内部构建/部署脚本与模拟端（含本机开发目录，不入库）----
+CuktechPanel.spec
+build_cuktech.py
+deploy_cuktech.py
+mock/
+
+# ---- 内部历史出包记录（含内部代号与取证路径，不随仓库发布）----
+docs/1.5.9_出包记录.md
+docs/2.1.0_出包记录.md
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
